@@ -131,7 +131,6 @@ export GOPATH=$HOME/go
 # alias
 alias checkp='bat /home/cristiansbardelotto/Documents/checkpoints.md'
 alias checkpe='nvim /home/cristiansbardelotto/Documents/checkpoints.md'
-alias zahrah='cd /home/cristiansbardelotto/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/compatdata/1222670/pfx/drive_c/users/steamuser/Documents/Electronic\ Arts/The\ Sims\ 4/Mods && echo ola zahrinha meu amor && nautilus . &'
 alias custom_upgrade='~/scripts/custom_upgrade.sh'
 alias waybar_r='killall waybar && waybar &'
 alias define='~/scripts/define.sh'
