@@ -135,6 +135,9 @@ alias custom_upgrade='~/scripts/custom_upgrade.sh'
 alias waybar_r='killall waybar && waybar &'
 alias define='~/scripts/define.sh'
 alias get_monitors='~/scripts/get_monitors.sh'
+alias translate='~/scripts/translate.sh'
+alias spicetify_fix='~/scripts/spicetify_fix.sh'
+alias stop_docker='sudo systemctl disable docker docker.socket containerd'
 
 csbuild() {
     gcc -o "$(basename "$1" .c)" "$1" -lcs50
@@ -143,5 +146,4 @@ csbuild() {
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export PATH=$PATH:/home/cristiansbardelotto/.spicetify
 export PATH=$PATH:~/.spicetify
