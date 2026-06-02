@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers/"                                                                 # edit as per your system
-IMAGE_PICKER_CONFIG="$HOME/dotfiles/.config/rofi/wallpaper-picker/styles.razi"                             # razi config
+IMAGE_PICKER_CONFIG="$HOME/dotfiles/.config/rofi/wallpaper-picker/styles.rasi"                             # razi config
 WALLPAPER_FILES=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \)) # add other like gif ...
 ROFI_MENU=""
 
@@ -18,7 +18,7 @@ SELECTED_WALLPAPER=$(echo -e "$ROFI_MENU" | rofi -dmenu \
 SELECTED_WALLPAPER_NAME=$(echo "$SELECTED_WALLPAPER" | sed 's/ (current)//')
 
 if [[ -n "$SELECTED_WALLPAPER_NAME" ]]; then
-  swww img "$WALLPAPER_DIR/$SELECTED_WALLPAPER_NAME" \
+  awww img "$WALLPAPER_DIR/$SELECTED_WALLPAPER_NAME" \
     --transition-type grow \
     --transition-duration 1 \
     --transition-fps 60

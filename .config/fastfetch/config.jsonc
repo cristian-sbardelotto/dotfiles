@@ -11,8 +11,8 @@
     // "source": "~/.local/share/fastfetch/images/hypr.png",
     "source": "/home/cristiansbardelotto/Pictures/Wallpapers/hinata.jpg",
     "type": "kitty",
-    "height": 20,
-    "width": 40,
+    "height": 15,
+    "width": 30,
     "padding": {
       "top": 2,
     },
@@ -65,16 +65,16 @@
       "key": " ",
       "keyColor": "37",
     },
-    {
-      "type": "cursor",
-      "key": " ",
-      "keyColor": "37",
-    },
-    {
-      "type": "terminalfont",
-      "key": " ",
-      "keyColor": "37",
-    },
+    // {
+     //  "type": "cursor",
+      // "key": " ",
+     //  "keyColor": "37",
+    // },
+    // {
+     //  "type": "terminalfont",
+     //  "key": " ",
+    //   "keyColor": "37",
+    // },
     {
       "type": "uptime",
       "key": " ",

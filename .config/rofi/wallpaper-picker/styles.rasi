@@ -7,17 +7,8 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-* {
-    background: #00000000;
-    background-alt: #00000040;
-    foreground: #ffffffff;
-    selected: #62aeefff;
-    active: #98c379ff;
-    urgent: #e06b74ff;
-}
-* {
-    font: "JetBrains Mono 12";
-}
+@import                          "../shared/colors.rasi"
+@import                          "../shared/fonts.rasi"
 
 /*****----- Main Window -----*****/
 window {
@@ -44,68 +35,54 @@ mainbox {
     enabled: true;
     spacing: 20px;
     margin: 0px;
-    padding: 50px;
+    padding: 20px;
     border: 0px solid;
     border-radius: 0px 0px 0px 0px;
     border-color: @selected;
-    background-color: @background;
-    children:
-        [ "inputbar",
-        "listview"];
+    background-color: transparent;
+    children: [ "inputbar", "listview"];
 }
 
 /*****----- Inputbar -----*****/
 inputbar {
     enabled: true;
-    spacing: 20px;
+    spacing: 10px;
     margin: 0px;
-    padding: 0px;
+    padding: 15px;
     border: 0px;
     border-radius: 0px;
     border-color: @selected;
-    background-color: @background;
+    background-color: @background-alt;
     text-color: @foreground;
-    children:
-        [ "prompt",
-        "entry"];
+    children: [ "prompt", "entry" ];
 }
 
 prompt {
     enabled: true;
-    border-radius: 15px;
-    padding: 3px 15px;
-    background-color: @selected;
-    text-color: @foreground;
-    font: "JetBrains Mono 10";
-    vertical-align: 0.5;
-    horizontal-align: 0.5;
+    background-color: inherit;
+    text-color: inherit;
 }
 textbox-prompt-colon {
-    enabled: true;
-    expand: false;
-    str: "::";
-    background-color: @selected;
-    text-color: @background-alt;
+    enabled:                     true;
+    expand:                      false;
+    str:                         "::";
+    background-color:            inherit;
+    text-color:                  inherit;
 }
 entry {
-    enabled: true;
-    expand: false;
-    width: 250px;
-    padding: 10px 15px;
-    border-radius: 15px;
-    background-color: @background-alt;
-    text-color: @foreground;
-    cursor: text;
-    placeholder: "search...";
-    font: "JetBrains Mono 10";
-    placeholder-color: inherit;
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Search...";
+    placeholder-color:           inherit;
 }
 
 /*****----- Listview -----*****/
 listview {
     enabled: true;
     columns: 3;
-    lines: 2;
+    lines: 3;
     cycle: true;
     dynamic: true;
     scrollbar: false;
@@ -114,13 +91,13 @@ listview {
     fixed-height: true;
     fixed-columns: true;
 
-    spacing: 0px;
+    spacing: 5px;
     margin: 0px;
     padding: 0px;
     border: 0px solid;
     border-radius: 0px;
     border-color: @selected;
-    background-color: @background-alt;
+    background-color: transparent;
     text-color: @foreground;
     cursor: "default";
 }
@@ -137,9 +114,9 @@ element {
     enabled: true;
     spacing: 0px;
     margin: 0px;
-    padding: 5px 0px;
+    padding: 0px 0px;
     border: 0px solid;
-    border-radius: 20px;
+    border-radius: 0px;
     border-color: @selected;
     background-color: @background;
     text-color: @foreground;
@@ -162,6 +139,8 @@ element-icon {
     cursor: inherit;
 }
 element-text {
+    // this line below removes the name of the image
+    enabled: false;
     background-color: transparent;
     text-color: inherit;
     highlight: inherit;

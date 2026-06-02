@@ -98,6 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='nvim'
 # fi
+export EDITOR='zed'
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -137,7 +138,15 @@ alias define='~/scripts/define.sh'
 alias get_monitors='~/scripts/get_monitors.sh'
 alias translate='~/scripts/translate.sh'
 alias spicetify_fix='~/scripts/spicetify_fix.sh'
+alias httpstatus='~/scripts/httpstatus.sh'
 alias stop_docker='sudo systemctl disable docker docker.socket containerd'
+alias explorer='nautilus . & disown'
+alias susp='systemctl suspend'
+alias tlou='nvim ~/Documents/tlou2.md'
+alias study='glow ~/Documents/plans/study.md --tui'
+alias movie='nvim ~/Documents/films.md'
+alias sigma_nation='~/develop/personal/youtube-teste/run.sh'
+alias unwmovies='python ~/develop/movies.py'
 
 csbuild() {
     gcc -o "$(basename "$1" .c)" "$1" -lcs50
