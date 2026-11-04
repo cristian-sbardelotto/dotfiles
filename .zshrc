@@ -144,7 +144,7 @@ alias explorer='nautilus . & disown'
 alias susp='systemctl suspend'
 alias tlou='nvim ~/Documents/tlou2.md'
 alias study='glow ~/Documents/plans/study.md --tui'
-alias movie='nvim ~/Documents/films.md'
+alias movies='nvim ~/Documents/films.md'
 alias sigma_nation='~/develop/personal/youtube-teste/run.sh'
 alias unwmovies='python ~/develop/movies.py'
 

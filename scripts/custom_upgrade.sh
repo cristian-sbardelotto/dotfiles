@@ -2,11 +2,22 @@
 
 echo -e "\033[1m\033[7mStarting system updates...\033[0m"
 
+# important image
+chafa --size=20x20 /home/cristiansbardelotto/Pictures/pfp/ralsei-fumante.webp
+
+# get permission for the whole script
+sudo -v
+while true; do
+  sudo -n true
+  sleep 60
+  kill -0 "$$" || exit
+done 2>/dev/null &
+
+# actual script
 sudo dnf -y autoremove
 sudo dnf -y clean all
 sudo dnf -y makecache
 sudo flatpak -y update
-sudo dnf -y update
 sudo dnf -y upgrade
 yes | trash-empty
 
@@ -24,16 +35,16 @@ echo "3. Exit the Terminal"
 read choice
 
 case $choice in
-  1)
-    sudo reboot
-    ;;
-  2)
-    sudo poweroff
-    ;;
-  3)
-    exit
-    ;;
-  *)
-    echo "Invalid choice. Please choose 1, 2, or 3."
-    ;;
+1)
+  sudo reboot
+  ;;
+2)
+  sudo poweroff
+  ;;
+3)
+  exit
+  ;;
+*)
+  echo "Invalid choice. Please choose 1, 2, or 3."
+  ;;
 esac
