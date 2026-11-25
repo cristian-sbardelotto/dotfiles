@@ -1,6 +1,6 @@
 ### cristian-sbardelotto dotfiles
 
->  Hyprland + Fedora 43 + Noctalia Shell
+>  Hyprland + Fedora 44 + Noctalia Shell
 
 welcome! these are my configuration files for my personal setup.
 
