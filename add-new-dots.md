@@ -1,11 +1,10 @@
-to add new dotfiles, do this
+### to add new dotfiles, do this
 
-1. get the dotfile location in you home folder
-2. copy the dotfile in the same structure in the dotfiles/ folder 
+1. copy the dotfile that's in your home folder in the same structure in the dotfiles/ folder 
 
 ```bash
-cp -r /home/username/.config/rofi /home/username/dotfiles/.config
+cp -r /home/username/.config/<config-folder-name> /home/username/dotfiles/.config
 ```
 
-3. make sure you're not gonna overwrite any files and you dotfiles git repo is up to date
-4. run `stow --adopt .` in `dotfiles/` folder
+2. make sure you're not gonna overwrite any files and you dotfiles git repo is up to date
+3. run `stow --adopt .` in `dotfiles/` folder
