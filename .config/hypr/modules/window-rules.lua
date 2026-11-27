@@ -59,7 +59,6 @@ hl.window_rule({
     size  = { 900, 700 },
 })
 
-
 -- WORKSPACES
 
 -- See https://wiki.hypr.land/Configuring/Dwindle-Layout/ for more

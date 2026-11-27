@@ -25,6 +25,16 @@ hl.config({
 -- https://wiki.hypr.land/Configuring/Variables/#decoration
 hl.config({
     decoration = {
+        wobble = {
+            enabled = true,
+            mesh = 32,            -- Amount of wobble mesh vertices per edge [2 - 32]
+            stiffness = 200,      -- Spring stiffness for wobble deformation [0.0001 - 1000]
+            damping = 12,         -- Spring damping for wobble deformation [0 - 1000]
+            mass = 1,             -- Spring mass for wobble deformation [0.0001 - 1000]
+            intensity = 0.5,      -- Wobble deformation impulse multiplier [0 - 2]
+            value_epsilon = 0.25, -- Position epsilon below which wobble is considered stable [0 - 100]
+            velocity_epsilon = 2, -- Velocity epsilon below which wobble is considered stable [0 - 1000]
+        },
         -- rounding = 4,
         -- rounding = 20,
         rounding = 0,

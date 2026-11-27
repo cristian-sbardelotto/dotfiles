@@ -132,7 +132,7 @@ export GOPATH=$HOME/go
 # alias
 alias checkp='bat /home/cristiansbardelotto/Documents/checkpoints.md'
 alias checkpe='nvim /home/cristiansbardelotto/Documents/checkpoints.md'
-alias custom_upgrade='~/scripts/custom_upgrade.sh'
+alias custom_upgrade='lua ~/scripts/custom_upgrade.lua'
 alias waybar_r='killall waybar && waybar &'
 alias define='~/scripts/define.sh'
 alias get_monitors='~/scripts/get_monitors.sh'

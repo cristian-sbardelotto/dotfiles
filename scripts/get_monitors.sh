@@ -1,1 +1,1 @@
-cat ~/.config/hypr/modules/monitors.conf
+cat ~/.config/hypr/modules/monitors.lua

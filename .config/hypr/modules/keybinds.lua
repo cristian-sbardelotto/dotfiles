@@ -17,7 +17,6 @@ hl.bind(modifier .. " + " .. "P", hl.dsp.window.pseudo())
 -- dwindle
 hl.bind(modifier .. " + J", hl.dsp.layout("togglesplit"))
 
-
 hl.bind(modifier .. " + " .. "B", hl.dsp.exec_cmd(programs.webBrowser))
 hl.bind(modifier .. " + " .. "L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(modifier .. " + " .. "S", hl.dsp.exec_cmd("flatpak run com.spotify.Client"))
@@ -27,7 +26,7 @@ hl.bind(
 )
 hl.bind(modifier .. " + " .. "period", hl.dsp.exec_cmd("rofimoji --action copy --skin-tone light"))
 hl.bind(modifier .. " + " .. "K", hl.dsp.exec_cmd("~/dotfiles/.config/rofi/wallpaper-picker/wallpaper-picker.sh"))
-hl.bind(modifier .. " + " .. "O", hl.dsp.exec_cmd("~/scripts/sound_picker.sh"))
+hl.bind(modifier .. " + " .. "O", hl.dsp.exec_cmd("lua ~/scripts/sound_picker.lua"))
 hl.bind(modifier .. " + " .. "M", hl.dsp.exec_cmd("killall noctalia && noctalia"))
 hl.bind(modifier .. " + " .. "N", hl.dsp.exec_cmd("~/scripts/notes.sh"))
 
@@ -71,7 +70,6 @@ hl.bind(modifier .. " + " .. "SHIFT" .. " + " .. "left", hl.dsp.window.move({ di
 -- Move workspaces to monitors
 hl.bind("CTRL" .. " + " .. modifier .. " + " .. "SHIFT" .. " + " .. 1, hl.dsp.workspace.move({ monitor = 0 }))
 hl.bind("CTRL" .. " + " .. modifier .. " + " .. "SHIFT" .. " + " .. 2, hl.dsp.workspace.move({ monitor = 1 }))
-
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(modifier .. " + " .. "mouse_down", hl.dsp.focus({ workspace = "e+1" }))
